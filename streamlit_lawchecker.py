@@ -1,17 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
 import csv
-
-# import requests
-
+import requests
 from urllib.request import urlopen
 from urllib.parse import quote_plus
-
-# from bs4 import BeautifulSoup as bs
-# import lxml.etree as xml
-# import lxml
+from bs4 import BeautifulSoup as bs
+import lxml.etree as xml
+import lxml
 
 
 
@@ -48,7 +44,7 @@ lawname = [
 
 df = pd.DataFrame([])
 for i in lawname:
-    url = 'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm='+quote_plus(i)+'&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
+    url = f'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm='+quote_plus(i)+'&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
     df1 = pd.read_html(url, encoding='utf-8')[0]
     df = pd.concat([df, df1])
 
