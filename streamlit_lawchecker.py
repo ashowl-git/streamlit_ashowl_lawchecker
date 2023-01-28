@@ -43,7 +43,7 @@ df = pd.DataFrame([])
 for i in lawname:
     url = 'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm='+quote_plus(i)+'&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
     # url = f'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm={quote_plus(i)}&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
-    df1 = pd.read_html(url, encoding='cp949')[0]
+    df1 = pd.read_html(url, encoding='utf-8')[0]
     df = pd.concat([df, df1])
 
 df = df.reset_index(drop=True)
