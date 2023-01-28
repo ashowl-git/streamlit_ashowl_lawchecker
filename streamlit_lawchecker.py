@@ -3,12 +3,15 @@ import pandas as pd
 import numpy as np
 
 import csv
-import requests
+
+# import requests
+
 from urllib.request import urlopen
 from urllib.parse import quote_plus
-from bs4 import BeautifulSoup as bs
-import lxml.etree as xml
-import lxml
+
+# from bs4 import BeautifulSoup as bs
+# import lxml.etree as xml
+# import lxml
 
 
 
