@@ -4,7 +4,7 @@ import numpy as np
 import csv
 from urllib.request import urlopen
 from urllib.parse import quote_plus
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 
 
