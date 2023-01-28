@@ -6,8 +6,8 @@ import requests
 from urllib.request import urlopen
 from urllib.parse import quote_plus
 # from bs4 import BeautifulSoup as bs
-import lxml.etree as xml
-import lxml
+# import lxml.etree as xml
+# import lxml
 
 
 
