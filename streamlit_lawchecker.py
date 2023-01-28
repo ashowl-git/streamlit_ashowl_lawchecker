@@ -122,7 +122,7 @@ df_fin = df_fin.sort_values('시행일자' , ascending=False)
 df_fin = df_fin.drop(columns=['번호','소관부처','법령종류','공포번호'])
 df_fin = df_fin.reset_index(drop=True)
 
-st.subheader('최신 법령')
+st.subheader('최신 법령 크롤링')
 
 st.dataframe(df_fin) 
 
