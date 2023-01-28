@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
 import csv
+import requests
 from urllib.request import urlopen
 from urllib.parse import quote_plus
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
+import lxml.etree as xml
+import lxml
 
 
 
