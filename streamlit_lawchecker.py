@@ -43,7 +43,7 @@ df = pd.DataFrame([])
 for i in lawname:
     url = 'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm='+quote_plus(i)+'&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
     # url = f'https://www.law.go.kr/LSW/nwRvsLsPop.do?pg=1&chrIdx=0&lsKndCd=&cptOfi=&searchType=lsNm&lsNm={quote_plus(i)}&p_spubdt=&p_epubdt=&p_spubno=&p_epubno='
-    df1 = pd.read_html(url)[0]
+    df1 = pd.read_html(url, encoding='euc-kr')[0]
     df = pd.concat([df, df1])
 
 df = df.reset_index(drop=True)
@@ -121,6 +121,6 @@ df_fin = df_fin.reset_index(drop=True)
 
 st.subheader('최신 법령')
 
-st.dataframe(df_fin, use_container_width=False) 
+st.dataframe(df_fin) 
 
 st.text('EAN research unit')
