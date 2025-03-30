@@ -144,4 +144,4 @@ st.subheader('최신 법령 개정일자확인')
 
 st.dataframe(df_fin) 
 
-st.text('EAN research unit')
+st.text('EAN Research Unit')
